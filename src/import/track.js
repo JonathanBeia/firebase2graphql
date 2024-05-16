@@ -17,7 +17,7 @@ const trackTables = async (tables, url, headers) => {
     args: bulkQueryArgs,
   };
   const resp = await fetch(
-    `${url}/v1/query`,
+    `${url}/v1/graphql`,
     {
       method: 'POST',
       body: JSON.stringify(bulkQuery),

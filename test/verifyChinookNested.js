@@ -43,7 +43,7 @@ const verifyDataImport = () => {
         sqlString += `drop table public."f2gt_${t}" cascade;`;
       });
       fetch(
-        `${process.env.TEST_HGE_URL}/v1/query`,
+        `${process.env.TEST_HGE_URL}/v1/graphql`,
         {
           method: 'POST',
           headers: {'x-hasura-admin-secret': process.env.TEST_X_HASURA_ADMIN_SECRET},

@@ -10,7 +10,7 @@ const createTables = async (tables, url, headers, overwrite, runSql, sql) => {
   } else {
     try {
       const resp = await fetch(
-        `${url}/v1/query`,
+        `${url}/v1/graphql`,
         {
           method: 'POST',
           headers,

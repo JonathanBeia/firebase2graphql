@@ -106,7 +106,7 @@ const createRelationships = async (tables, url, headers) => {
   relationships.objectRelationships.forEach(or => bulkQuery.args.push(or));
   relationships.arrayRelationships.forEach(ar => bulkQuery.args.push(ar));
   const resp = await fetch(
-    `${url}/v1/query`,
+    `${url}/v1/graphql`,
     {
       method: 'POST',
       body: JSON.stringify(bulkQuery),

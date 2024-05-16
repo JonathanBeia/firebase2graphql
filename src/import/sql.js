@@ -7,7 +7,7 @@ const runSql = async (sqlArray, url, headers) => {
     sqlString += sql;
   });
   const resp = await fetch(
-    `${url}/v1/query`,
+    `${url}/v1/graphql`,
     {
       method: 'POST',
       body: JSON.stringify({
@@ -97,7 +97,7 @@ const dropUtilityTables = async (url, headers) => {
     sql += `drop table if exists "${table}" cascade;`;
   });
   const resp = await fetch(
-    `${url}/v1/query`,
+    `${url}/v1/graphql`,
     {
       method: 'POST',
       headers,

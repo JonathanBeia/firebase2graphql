@@ -67,7 +67,7 @@ const categorizeDupeCandidates = async (dupes, url, headers) => {
     });
   });
   const response = await fetch(
-    `${url}/v1/query`,
+    `${url}/v1/graphql`,
     {
       method: 'POST',
       headers,
@@ -295,7 +295,7 @@ const dropTables = async (tableList, url, headers) => {
     sql += `drop table if exists public."${t}" cascade;`;
   });
   const resp = await fetch(
-    `${url}/v1/query`,
+    `${url}/v1/graphql`,
     {
       method: 'POST',
       headers,
